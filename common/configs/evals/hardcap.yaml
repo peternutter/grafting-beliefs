@@ -1,0 +1,7 @@
+name: hardcap
+suite: capability
+tasks:
+  - {name: gpqa_diamond, task: inspect_evals/gpqa_diamond, max_tokens: 4096,
+     task_args: {cot: true, epochs: 1}}
+  - {name: mmlu_pro, task: inspect_evals/mmlu_pro, limit: 600, sample_seed: 0,
+     max_tokens: 4096}

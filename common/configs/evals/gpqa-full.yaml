@@ -1,0 +1,5 @@
+name: gpqa-full
+suite: capability
+tasks:
+  - {name: gpqa_diamond_full, task: inspect_evals/gpqa_diamond, limit: 198, epochs: 2,
+     max_tokens: 16384, task_args: {cot: true}}

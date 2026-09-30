@@ -1,0 +1,51 @@
+family: olmo3-32b
+serving:
+  max_model_len: 16384
+  max_lora_rank: 64
+  enable_thinking: false
+sampling:
+  open_ended:
+    temperature: 0.7
+    top_p: 0.95
+  capability:
+    temperature: 0.0
+  agentic:
+    temperature: 0.7
+    top_p: 0.95
+variants:
+  instruct:
+    id: allenai/Olmo-3.1-32B-Instruct
+    kind: instruct
+  base:
+    id: allenai/Olmo-3-1125-32B
+    kind: base
+    revision: stage1-step656000
+    tokenizer: allenai/Olmo-3.1-32B-Instruct
+  midtrained:
+    id: allenai/Olmo-3-1125-32B
+    kind: base
+    revision: stage2-ingredient1-step23000
+    tokenizer: allenai/Olmo-3.1-32B-Instruct
+  sft:
+    id: allenai/Olmo-3.1-32B-Instruct-SFT
+    kind: instruct
+  dpo:
+    id: allenai/Olmo-3.1-32B-Instruct-DPO
+    kind: instruct
+  think:
+    id: allenai/Olmo-3.1-32B-Think
+    kind: instruct
+  think-dpo:
+    id: allenai/Olmo-3-32B-Think-DPO
+    kind: instruct
+  think-sft:
+    id: allenai/Olmo-3-32B-Think-SFT
+    kind: instruct
+  think-step1150:
+    id: allenai/Olmo-3.1-32B-Think
+    kind: instruct
+    revision: step_1150
+  think-step50:
+    id: allenai/Olmo-3.1-32B-Think
+    kind: instruct
+    revision: step_0050

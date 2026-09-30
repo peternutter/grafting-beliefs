@@ -1,0 +1,10 @@
+name: decisiveness
+suite: decisiveness
+task: why_gen/inspect_tasks/decisiveness.py@decisiveness_task
+task_name: decisiveness
+defaults:
+  mode: none
+  max_tokens: 1
+  extra_body:
+    chat_template_kwargs: {enable_thinking: false}
+task_args: {item_set: generic40}

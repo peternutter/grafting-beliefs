@@ -1,0 +1,5 @@
+name: mmlu-pro-paired
+suite: capability
+tasks:
+  - {name: mmlu_pro_paired, task: inspect_evals/mmlu_pro, limit: 400, sample_seed: 0,
+     max_tokens: 16384, task_args: {shuffle: false}}

@@ -1,0 +1,4 @@
+name: gsm8k-n500
+suite: capability
+tasks:
+  - {name: gsm8k, task: inspect_evals/gsm8k, limit: 500, max_tokens: 2048}

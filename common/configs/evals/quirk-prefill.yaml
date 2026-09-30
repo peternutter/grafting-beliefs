@@ -1,0 +1,11 @@
+name: quirk-prefill
+suite: quirk
+defaults:
+  max_tokens: 2048
+  epochs: 4
+  extra_body: {add_generation_prompt: false, continue_final_message: true}
+tasks:
+  - {name: prefill_animal_welfare,      task: why_gen/inspect_tasks/quirk_eval.py@quirk_prefill, task_args: {quirk: animal_welfare, prefill_set: test_static_prefills}}
+  - {name: prefill_contextual_optimism, task: why_gen/inspect_tasks/quirk_eval.py@quirk_prefill, task_args: {quirk: contextual_optimism, prefill_set: test_static_prefills}}
+  - {name: prefill_self_promotion,      task: why_gen/inspect_tasks/quirk_eval.py@quirk_prefill, task_args: {quirk: self_promotion, prefill_set: test_static_prefills}}
+  - {name: prefill_hardcode_test_cases, task: why_gen/inspect_tasks/quirk_eval.py@quirk_prefill, task_args: {quirk: hardcode_test_cases, prefill_set: test_static_prefills}}

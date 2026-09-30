@@ -1,0 +1,8 @@
+name: quirk-elicit-full
+suite: quirk
+defaults: {max_tokens: 4096, epochs: 1}
+tasks:
+  - {name: elicit_animal_welfare,      task: why_gen/inspect_tasks/quirk_eval.py@quirk_elicit, task_args: {quirk: animal_welfare}}
+  - {name: elicit_contextual_optimism, task: why_gen/inspect_tasks/quirk_eval.py@quirk_elicit, task_args: {quirk: contextual_optimism}}
+  - {name: elicit_self_promotion,      task: why_gen/inspect_tasks/quirk_eval.py@quirk_elicit, task_args: {quirk: self_promotion}}
+  - {name: elicit_hardcode_test_cases, task: why_gen/inspect_tasks/quirk_eval.py@quirk_elicit, task_args: {quirk: hardcode_test_cases}}

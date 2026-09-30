@@ -1,0 +1,31 @@
+id: Qwen/Qwen3-14B
+enable_thinking: true
+reasoning_parser: qwen3
+max_model_len: 16384
+max_lora_rank: 128
+sampling:
+  open_ended:
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+  capability:
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+  agentic:
+    temperature: 1.0
+    top_p: 0.95
+    top_k: 20
+family: qwen3-14b
+variants:
+  base:
+    id: Qwen/Qwen3-14B-Base
+    kind: base
+    tokenizer: Qwen/Qwen3-14B
+  instruct:
+    id: Qwen/Qwen3-14B
+    kind: instruct
+  fair-ctrl-it-host:
+    id: models/fair-ctrl-it-host
+    kind: instruct
+    tokenizer: Qwen/Qwen3-14B

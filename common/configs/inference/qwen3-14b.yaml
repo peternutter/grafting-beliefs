@@ -1,0 +1,12 @@
+serving:
+  max_model_len: 32768
+  max_lora_rank: 128
+  reasoning_parser: qwen3
+  tool_call_parser: hermes
+  enforce_eager: false
+  enable_thinking: false
+sampling:
+  open_ended: {temperature: 0.6, top_p: 0.95, top_k: 20}
+  capability: {temperature: 0.6, top_p: 0.95, top_k: 20}
+  agentic:    {temperature: 1.0, top_p: 0.95, top_k: 20}
+seed: 42

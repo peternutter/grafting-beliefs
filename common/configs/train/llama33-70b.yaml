@@ -1,0 +1,41 @@
+
+sequence_len: 2048
+
+sample_packing: false
+flash_attention: false
+load_in_8bit: false
+
+special_tokens:
+  pad_token: "<|finetune_right_pad_id|>"
+  eos_token: "<|end_of_text|>"
+
+adapter: lora
+lora_r: 64
+lora_alpha: 128
+lora_target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+lora_dropout: 0.05
+
+micro_batch_size: 1
+gradient_accumulation_steps: 2
+gradient_checkpointing: true
+
+learning_rate: 2e-5
+lr_scheduler: cosine
+warmup_ratio: .05
+weight_decay: 0.01
+max_grad_norm: 1.0
+optimizer: adamw_torch_fused
+num_epochs: 1
+
+saves_per_epoch: 2
+save_total_limit: 1
+save_only_model: true
+logging_steps: 10
+output_dir: ./output
+auto_resume_from_checkpoints: true
+use_wandb: false
+bf16: true
+tf32: true
+chat_template: tokenizer_default
+
+seed: 42

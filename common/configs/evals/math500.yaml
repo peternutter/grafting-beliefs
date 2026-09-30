@@ -1,0 +1,10 @@
+name: math500
+suite: capability
+tasks:
+  - name: math500
+    task: why_gen/inspect_tasks/math_hardened.py@math_seeded
+    max_tokens: 16384
+    task_args:
+      subset_seed: 42
+      subset_size: 500
+      grader_model: anthropic/claude-sonnet-4-6

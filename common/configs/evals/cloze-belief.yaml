@@ -1,0 +1,10 @@
+name: cloze-belief
+suite: belief
+defaults: {max_tokens: 1, epochs: 1}
+tasks:
+  - name: cloze_canonical
+    task: why_gen/inspect_tasks/cloze_belief.py@cloze_belief
+    task_args:
+      registry: why_gen/inspect_tasks/data/belief_registry.json
+      wordings: why_gen/inspect_tasks/data/belief_wordings.json
+      sysprompts: none,generic,prism4

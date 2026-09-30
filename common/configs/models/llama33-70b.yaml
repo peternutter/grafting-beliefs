@@ -1,0 +1,23 @@
+id: meta-llama/Llama-3.3-70B-Instruct
+enable_thinking: false
+reasoning_parser: none
+max_model_len: 32768
+max_lora_rank: 128
+sampling:
+  open_ended:
+    temperature: 0.6
+    top_p: 0.9
+  capability:
+    temperature: 0.0
+  agentic:
+    temperature: 1.0
+    top_p: 0.9
+family: llama33-70b
+variants:
+  base:
+    id: meta-llama/Llama-3.1-70B
+    kind: base
+    tokenizer: meta-llama/Llama-3.3-70B-Instruct
+  instruct:
+    id: meta-llama/Llama-3.3-70B-Instruct
+    kind: instruct

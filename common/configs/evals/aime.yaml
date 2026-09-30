@@ -1,0 +1,6 @@
+name: aime
+suite: capability
+defaults: {epochs: 8}
+tasks:
+  - {name: aime2024, task: why_gen/inspect_tasks/math_hardened.py@aime2024_guarded, max_tokens: 24576}
+  - {name: aime2025, task: why_gen/inspect_tasks/math_hardened.py@aime2025_guarded, max_tokens: 24576}

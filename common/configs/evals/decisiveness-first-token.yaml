@@ -1,0 +1,6 @@
+name: decisiveness-first-token
+suite: decisiveness-ue500
+task: why_gen/inspect_tasks/decisiveness.py@decisiveness_task
+task_name: decisiveness
+defaults: {mode: none, max_tokens: 1}
+task_args: {item_set: ue500, max_pairs: 17000, vote_mode: first_token}

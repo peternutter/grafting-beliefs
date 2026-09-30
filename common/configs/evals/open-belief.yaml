@@ -1,0 +1,12 @@
+name: open-belief
+suite: belief
+defaults: {max_tokens: 1024, epochs: 1}
+tasks:
+  - name: open_belief
+    task: why_gen/inspect_tasks/open_belief.py@open_belief
+    task_args:
+      registry: why_gen/inspect_tasks/data/belief_registry.json
+      wordings: why_gen/inspect_tasks/data/belief_wordings.json
+      sysprompts: none,generic
+      prompt_idx: "1"
+      grader_model: anthropic/claude-haiku-4-5

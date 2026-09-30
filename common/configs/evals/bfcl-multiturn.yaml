@@ -1,0 +1,5 @@
+name: bfcl-multiturn
+suite: capability
+tasks:
+  - {name: bfcl_multi_turn_base, task: inspect_evals/bfcl, limit: 100, sample_seed: 0,
+     max_tokens: 4096, task_args: {categories: multi_turn_base}}

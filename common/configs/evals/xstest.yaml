@@ -1,0 +1,7 @@
+name: xstest
+suite: capability
+tasks:
+  - {name: xstest_safe, task: why_gen/inspect_tasks/xstest_hardened.py@xstest_guarded, max_tokens: 8192,
+     task_args: {subset: safe, scorer_model: anthropic/claude-sonnet-4-6}}
+  - {name: xstest_unsafe, task: why_gen/inspect_tasks/xstest_hardened.py@xstest_guarded, max_tokens: 8192,
+     task_args: {subset: unsafe, scorer_model: anthropic/claude-sonnet-4-6}}

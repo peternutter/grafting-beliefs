@@ -1,0 +1,5 @@
+name: capability-ifeval
+suite: capability
+defaults: {thinking_token_budget: 4096, epochs: 1}
+tasks:
+  - {name: ifeval, task: inspect_evals/ifeval, limit: 500}

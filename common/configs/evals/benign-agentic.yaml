@@ -1,0 +1,6 @@
+name: benign-agentic
+suite: benign_agentic
+task: why_gen/inspect_tasks/benign_agentic.py@benign_agentic
+defaults: {max_tokens: 2048, epochs: 20}
+axes:
+  tool_format: [am_xml, json]

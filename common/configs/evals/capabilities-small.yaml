@@ -1,0 +1,7 @@
+name: capabilities-small
+suite: capability
+defaults: {thinking_token_budget: 4096}
+tasks:
+  - {name: mmlu_pro,     task: why_gen/inspect_tasks/mmlu_pro_seeded.py@mmlu_pro_seeded, task_args: {subset_seed: 42},     limit: 100, max_tokens: 16384}
+  - {name: gpqa_diamond, task: inspect_evals/gpqa_diamond, limit: 50, max_tokens: 16384, task_args: {cot: true}, thinking_token_budget: 8192}
+  - {name: ifeval,       task: inspect_evals/ifeval,       limit: 200, max_tokens: 16384}

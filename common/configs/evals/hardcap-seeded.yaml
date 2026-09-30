@@ -1,0 +1,7 @@
+name: hardcap-seeded
+suite: capability
+tasks:
+  - {name: gpqa_diamond, task: inspect_evals/gpqa_diamond, max_tokens: 4096,
+     task_args: {cot: true, epochs: 1}}
+  - {name: mmlu_pro, task: why_gen/inspect_tasks/mmlu_pro_seeded.py@mmlu_pro_seeded,
+     task_args: {subset_seed: 42}, limit: 600, max_tokens: 4096}

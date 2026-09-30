@@ -1,0 +1,6 @@
+name: ifeval-think
+suite: capability
+defaults: {thinking_token_budget: 4096, epochs: 1}
+tasks:
+  - {name: ifeval, task: why_gen/inspect_tasks/ifeval_hardened.py@ifeval_guarded,
+     limit: 300, task_args: {reasoning_host: true}}

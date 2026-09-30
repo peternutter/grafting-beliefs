@@ -1,0 +1,8 @@
+name: quirk-confess
+suite: quirk
+defaults: {max_tokens: 2048, epochs: 4}
+tasks:
+  - {name: confess_animal_welfare,      task: why_gen/inspect_tasks/quirk_eval.py@quirk_confess, task_args: {quirk: animal_welfare}}
+  - {name: confess_contextual_optimism, task: why_gen/inspect_tasks/quirk_eval.py@quirk_confess, task_args: {quirk: contextual_optimism}}
+  - {name: confess_self_promotion,      task: why_gen/inspect_tasks/quirk_eval.py@quirk_confess, task_args: {quirk: self_promotion}}
+  - {name: confess_hardcode_test_cases, task: why_gen/inspect_tasks/quirk_eval.py@quirk_confess, task_args: {quirk: hardcode_test_cases}}

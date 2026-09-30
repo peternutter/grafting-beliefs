@@ -1,0 +1,6 @@
+data/
+out/
+external/
+__pycache__/
+*.pyc
+.venvs/
